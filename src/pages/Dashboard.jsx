@@ -236,9 +236,9 @@ export default function Dashboard() {
               <div className="footer__social">
                 <h5 className="footer__social-title">Follow Us</h5>
                 <div className="social-links">
-                  <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
-                  <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🗺 LinkedIn</a>
-                  <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">📱 Facebook</a>
+                  <button type="button" className="social-link">🐦 Twitter</button>
+                  <button type="button" className="social-link">🗺 LinkedIn</button>
+                  <button type="button" className="social-link">📱 Facebook</button>
                 </div>
               </div>
             </div>
@@ -257,11 +257,11 @@ export default function Dashboard() {
             <div className="footer__section">
               <h4 className="footer__section-title">Resources</h4>
               <ul className="footer__links">
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Help Center</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">API Documentation</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Medical Guidelines</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Research Papers</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li><button type="button" className="footer-link-button">Help Center</button></li>
+                <li><button type="button" className="footer-link-button">API Documentation</button></li>
+                <li><button type="button" className="footer-link-button">Medical Guidelines</button></li>
+                <li><button type="button" className="footer-link-button">Research Papers</button></li>
+                <li><button type="button" className="footer-link-button">Blog</button></li>
               </ul>
             </div>
 
@@ -294,10 +294,10 @@ export default function Dashboard() {
                 <p>&copy; 2025 Skeleti-x. All rights reserved.</p>
               </div>
               <div className="footer__legal">
-                <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Accessibility</a>
+                <button type="button" className="footer-link-button">Privacy Policy</button>
+                <button type="button" className="footer-link-button">Terms of Service</button>
+                <button type="button" className="footer-link-button">Cookie Policy</button>
+                <button type="button" className="footer-link-button">Accessibility</button>
               </div>
             </div>
           </div>

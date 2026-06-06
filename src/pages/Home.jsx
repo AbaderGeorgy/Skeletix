@@ -4,42 +4,14 @@ import Header from "../components/Header";
 import "../styles/home.css";
 
 function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || "light"
   );
-
-  const [chatVisible, setChatVisible] = useState(false);
-  const [chatMessages, setChatMessages] = useState([
-    { type: "bot", text: "Hello! How can I help you today?" },
-  ]);
-  const [chatInput, setChatInput] = useState("");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
-
-  const sendChatbotMessage = () => {
-    if (!chatInput.trim()) return;
-
-    const newMessages = [...chatMessages, { type: "user", text: chatInput }];
-    setChatMessages(newMessages);
-    setChatInput("");
-
-    setTimeout(() => {
-      const botResponse = getBotResponse(chatInput);
-      setChatMessages((prev) => [...prev, { type: "bot", text: botResponse }]);
-    }, 1000);
-  };
-
-  const getBotResponse = (message) => {
-    const msg = message.toLowerCase();
-    if (msg.includes("hello") || msg.includes("hi")) return "Hi! How can I assist you today?";
-    if (msg.includes("service") || msg.includes("what can you do")) return "We analyze X-rays, MRI, CT scans and lab reports with AI.";
-    if (msg.includes("upload") || msg.includes("how to")) return "Drag & drop your files to start analysis.";
-    return "Thanks for your message! I'm here to assist with medical imaging.";
-  };
 
   useEffect(() => {
     const elements = document.querySelectorAll(
@@ -498,9 +470,9 @@ function Home() {
         <div className="footer__social">
           <h5 className="footer__social-title">Follow Us</h5>
           <div className="social-links">
-            <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
-            <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🗺 LinkedIn</a>
-            <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">📱 Facebook</a>
+            <button type="button" className="social-link">🐦 Twitter</button>
+            <button type="button" className="social-link">🗺 LinkedIn</button>
+            <button type="button" className="social-link">📱 Facebook</button>
           </div>
         </div>
       </div>
@@ -519,11 +491,11 @@ function Home() {
       <div className="footer__section">
         <h4 className="footer__section-title">Resources</h4>
         <ul className="footer__links">
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Help Center</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">API Documentation</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Medical Guidelines</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Research Papers</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Blog</a></li>
+          <li><button type="button" className="footer-link-button">Help Center</button></li>
+          <li><button type="button" className="footer-link-button">API Documentation</button></li>
+          <li><button type="button" className="footer-link-button">Medical Guidelines</button></li>
+          <li><button type="button" className="footer-link-button">Research Papers</button></li>
+          <li><button type="button" className="footer-link-button">Blog</button></li>
         </ul>
       </div>
 
@@ -556,10 +528,10 @@ function Home() {
           <p>&copy; 2025 Skeleti-x. All rights reserved.</p>
         </div>
         <div className="footer__legal">
-          <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Accessibility</a>
+          <button type="button" className="footer-link-button">Privacy Policy</button>
+          <button type="button" className="footer-link-button">Terms of Service</button>
+          <button type="button" className="footer-link-button">Cookie Policy</button>
+          <button type="button" className="footer-link-button">Accessibility</button>
         </div>
       </div>
     </div>

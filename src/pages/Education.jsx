@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/education.css';
 import Header from "../components/Header";
 
@@ -292,7 +293,6 @@ function Education() {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [showNotification, setShowNotification] = useState(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [newsletterLoading, setNewsletterLoading] = useState(false);
 
   const modalRef = useRef(null);
@@ -424,14 +424,6 @@ function Education() {
   const filteredArticles = activeCategory === 'all'
     ? articles
     : articles.filter(article => article.category === activeCategory);
-
-  
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
 
   
   const handleCategoryFilter = (category) => {
@@ -650,18 +642,6 @@ function Education() {
       case 'lab': return 'lab-category';
       case 'ai': return 'ai-category';
       case 'security': return 'security-category';
-      default: return '';
-    }
-  };
-
-  const getCategoryBg = (category) => {
-    switch (category) {
-      case 'xray': return 'xray-bg';
-      case 'mri': return 'mri-bg';
-      case 'ct': return 'ct-bg';
-      case 'lab': return 'lab-bg';
-      case 'ai': return 'ai-bg';
-      case 'security': return 'security-bg';
       default: return '';
     }
   };
@@ -911,9 +891,9 @@ function Education() {
                 <div className="footer__social">
                   <h5 className="footer__social-title">Follow Us</h5>
                   <div className="social-links">
-                    <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
-                    <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🗺 LinkedIn</a>
-                    <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">📱 Facebook</a>
+                    <button type="button" className="social-link">🐦 Twitter</button>
+                    <button type="button" className="social-link">🗺 LinkedIn</button>
+                    <button type="button" className="social-link">📱 Facebook</button>
                   </div>
                 </div>
               </div>
@@ -921,22 +901,22 @@ function Education() {
               <div className="footer__section">
                 <h4 className="footer__section-title">Quick Links</h4>
                 <ul className="footer__links">
-                  <li><a href="/upload">Upload Files</a></li>
-                  <li><a href="/dashboard">Dashboard</a></li>
-                  <li><a href="/reports">View Reports</a></li>
-                  <li><a href="/chat">AI Assistant</a></li>
-                  <li><a href="/education" className="active">Education Center</a></li>
+                  <li><Link to="/upload">Upload Files</Link></li>
+                  <li><Link to="/dashboard">Dashboard</Link></li>
+                  <li><Link to="/reports">View Reports</Link></li>
+                  <li><Link to="/chatbot">AI Assistant</Link></li>
+                  <li><Link to="/education" className="active">Education Center</Link></li>
                 </ul>
               </div>
 
               <div className="footer__section">
                 <h4 className="footer__section-title">Resources</h4>
                 <ul className="footer__links">
-                  <li><a href="#" target="_blank" rel="noopener noreferrer">Help Center</a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer">API Documentation</a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer">Medical Guidelines</a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer">Research Papers</a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                  <li><button type="button" className="footer-link-button">Help Center</button></li>
+                  <li><button type="button" className="footer-link-button">API Documentation</button></li>
+                  <li><button type="button" className="footer-link-button">Medical Guidelines</button></li>
+                  <li><button type="button" className="footer-link-button">Research Papers</button></li>
+                  <li><button type="button" className="footer-link-button">Blog</button></li>
                 </ul>
               </div>
 
@@ -986,10 +966,10 @@ function Education() {
                   <p>&copy; 2025 Skeleti-x. All rights reserved.</p>
                 </div>
                 <div className="footer__legal">
-                  <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">Accessibility</a>
+                  <button type="button" className="footer-link-button">Privacy Policy</button>
+                  <button type="button" className="footer-link-button">Terms of Service</button>
+                  <button type="button" className="footer-link-button">Cookie Policy</button>
+                  <button type="button" className="footer-link-button">Accessibility</button>
                 </div>
               </div>
             </div>
