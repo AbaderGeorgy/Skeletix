@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../styles/home.css";
 
@@ -98,8 +99,8 @@ function Home() {
                     </div>
                   </div>
                   <div className="hero__buttons">
-                    <a href="./upload" className="btn_1 btn--primary btn--lg" data-page="upload">Starts Free Analysis</a>
-                    <a href="#" className="btn_1 btn--secondary btn--lg hero-demo-btn">Watch Demo</a>
+                    <Link to="/upload" className="btn_1 btn--primary btn--lg">Starts Free Analysis</Link>
+                    <button type="button" className="btn_1 btn--secondary btn--lg hero-demo-btn">Watch Demo</button>
                   </div>
                   <div className="hero__trust">
                     <span className="trust-item">50,000+ images analyzed</span>
@@ -353,7 +354,7 @@ function Home() {
           </div>
         </div>
 
-        <a href="./" className="btn_1 btn--primary btn--lg" data-page="login">Start Free Trial</a>
+        <Link to="/" className="btn_1 btn--primary btn--lg">Start Free Trial</Link>
       </div>
 
       <div className="benefits__image animate-float">
@@ -437,12 +438,12 @@ function Home() {
       </div>
 
       <div className="cta__buttons">
-        <a href="#" className="btn_1 btn--white btn--lg cta-primary" data-page="login">
+        <Link to="/" className="btn_1 btn--white btn--lg cta-primary">
           Start Your Free Analysis
-        </a>
-        <a href="#" className="btn_1 btn--outline-white btn--lg" data-page="education">
+        </Link>
+        <Link to="/education" className="btn_1 btn--outline-white btn--lg">
           Contact Sales
-        </a>
+        </Link>
       </div>
 
       <div className="cta-geometric">
@@ -507,9 +508,9 @@ function Home() {
         <div className="footer__social">
           <h5>Follow Us</h5>
           <div className="social-links">
-            <a href="#" className="social-link" target="_blank">🐦 Twitter</a>
-            <a href="#" className="social-link" target="_blank">🗺 LinkedIn</a>
-            <a href="#" className="social-link" target="_blank">📱 Facebook</a>
+            <button type="button" className="social-link">🐦 Twitter</button>
+            <button type="button" className="social-link">🗺 LinkedIn</button>
+            <button type="button" className="social-link">📱 Facebook</button>
           </div>
         </div>
       </div>
@@ -517,22 +518,22 @@ function Home() {
       <div className="footer__section">
         <h4>Quick Links</h4>
         <ul className="footer__links">
-          <li><a href="#" data-page="upload">Upload Files</a></li>
-          <li><a href="#" data-page="dashboard">Dashboard</a></li>
-          <li><a href="#" data-page="reports">View Reports</a></li>
-          <li><a href="#" data-page="chat">AI Assistant</a></li>
-          <li><a href="#" data-page="education">Education Center</a></li>
+          <li><Link to="/upload">Upload Files</Link></li>
+          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/reports">View Reports</Link></li>
+          <li><Link to="/chatbot">AI Assistant</Link></li>
+          <li><Link to="/education">Education Center</Link></li>
         </ul>
       </div>
 
       <div className="footer__section">
         <h4>Resources</h4>
         <ul className="footer__links">
-          <li><a href="#" target="_blank">Help Center</a></li>
-          <li><a href="#" target="_blank">API Documentation</a></li>
-          <li><a href="#" target="_blank">Medical Guidelines</a></li>
-          <li><a href="#" target="_blank">Research Papers</a></li>
-          <li><a href="#" target="_blank">Blog</a></li>
+          <li><button type="button" className="footer-link-button">Help Center</button></li>
+          <li><button type="button" className="footer-link-button">API Documentation</button></li>
+          <li><button type="button" className="footer-link-button">Medical Guidelines</button></li>
+          <li><button type="button" className="footer-link-button">Research Papers</button></li>
+          <li><button type="button" className="footer-link-button">Blog</button></li>
         </ul>
       </div>
 
@@ -565,10 +566,10 @@ function Home() {
           <p>&copy; 2025 Skeleti-x. All rights reserved.</p>
         </div>
         <div className="footer__legal">
-          <a href="#" target="_blank">Privacy Policy</a>
-          <a href="#" target="_blank">Terms of Service</a>
-          <a href="#" target="_blank">Cookie Policy</a>
-          <a href="#" target="_blank">Accessibility</a>
+          <button type="button" className="footer-link-button">Privacy Policy</button>
+          <button type="button" className="footer-link-button">Terms of Service</button>
+          <button type="button" className="footer-link-button">Cookie Policy</button>
+          <button type="button" className="footer-link-button">Accessibility</button>
         </div>
       </div>
     </div>

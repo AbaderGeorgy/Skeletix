@@ -276,13 +276,13 @@ export default function Register() {
                   />
                   <span className="checkbox-label">
                     I agree to the{" "}
-                    <a href="#" className="terms-link">
+                    <button type="button" className="terms-link" style={{ background: 'none', border: 'none', color: 'inherit', textDecoration: 'underline', cursor: 'pointer', padding: 0 }}>
                       Terms & Conditions
-                    </a>{" "}
+                    </button>{" "}
                     and{" "}
-                    <a href="#" className="terms-link">
+                    <button type="button" className="terms-link" style={{ background: 'none', border: 'none', color: 'inherit', textDecoration: 'underline', cursor: 'pointer', padding: 0 }}>
                       Privacy Policy
-                    </a>
+                    </button>
                   </span>
                 </label>
               </div>

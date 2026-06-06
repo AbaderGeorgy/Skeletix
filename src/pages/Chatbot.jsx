@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import { useChatbotConversation, DEFAULT_INITIAL_MESSAGE } from "../hooks/useChatbotConversation";
 
@@ -135,15 +136,9 @@ export default function Chatbot() {
               <div className="footer__social">
                 <h5>Follow Us</h5>
                 <div className="social-links">
-                  <a href="#" className="social-link" target="_blank" rel="noreferrer">
-                    🐦 Twitter
-                  </a>
-                  <a href="#" className="social-link" target="_blank" rel="noreferrer">
-                    🗺 LinkedIn
-                  </a>
-                  <a href="#" className="social-link" target="_blank" rel="noreferrer">
-                    📱 Facebook
-                  </a>
+                  <button type="button" className="social-link">🐦 Twitter</button>
+                  <button type="button" className="social-link">🗺 LinkedIn</button>
+                  <button type="button" className="social-link">📱 Facebook</button>
                 </div>
               </div>
             </div>
@@ -152,29 +147,29 @@ export default function Chatbot() {
               <h4>Quick Links</h4>
               <ul className="footer__links">
                 <li>
-                  <a href="#" data-page="upload">
+                  <Link to="/upload">
                     Upload Files
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" data-page="dashboard">
+                  <Link to="/dashboard">
                     Dashboard
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" data-page="reports">
+                  <Link to="/reports">
                     View Reports
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" data-page="chat">
+                  <Link to="/chatbot">
                     AI Assistant
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" data-page="education">
+                  <Link to="/education">
                     Education Center
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -183,29 +178,29 @@ export default function Chatbot() {
               <h4>Resources</h4>
               <ul className="footer__links">
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <button type="button" className="footer-link-button">
                     Help Center
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <button type="button" className="footer-link-button">
                     API Documentation
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <button type="button" className="footer-link-button">
                     Medical Guidelines
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <button type="button" className="footer-link-button">
                     Research Papers
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <button type="button" className="footer-link-button">
                     Blog
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -241,18 +236,18 @@ export default function Chatbot() {
                 <p>&copy; 2025 Skeleti-x. All rights reserved.</p>
               </div>
               <div className="footer__legal">
-                <a href="#" target="_blank" rel="noreferrer">
+                <button type="button" className="footer-link-button">
                   Privacy Policy
-                </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                </button>
+                <button type="button" className="footer-link-button">
                   Terms of Service
-                </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                </button>
+                <button type="button" className="footer-link-button">
                   Cookie Policy
-                </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                </button>
+                <button type="button" className="footer-link-button">
                   Accessibility
-                </a>
+                </button>
               </div>
             </div>
           </div>

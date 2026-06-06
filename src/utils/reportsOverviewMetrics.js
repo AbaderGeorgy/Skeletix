@@ -27,8 +27,6 @@ export const buildReportsOverviewMetrics = ({
   const apiPending = Number(apiStats?.pendingReports) || 0;
   const apiTotal = apiCompleted + apiPending;
 
-  const minimumCount = Math.max(historyCount, hasQuick ? 1 : 0);
-
   const totalReports = Math.max(apiTotal, historyCount, hasQuick ? 1 : 0);
   const completedReports = Math.max(apiCompleted, historyCount, hasQuick ? 1 : 0);
 
