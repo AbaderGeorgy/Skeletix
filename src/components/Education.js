@@ -1,3 +1,3 @@
-import { useEffect, useState } from "react";
+// This file is a placeholder for Education component
 
 

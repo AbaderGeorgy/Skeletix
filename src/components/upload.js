@@ -3,19 +3,11 @@ export function initUploadPage() {
     
     initializeNotifications();
     
-    const fileIcons = {
-        'image': '🖼️',
-        'application/pdf': '📄',
-        'dicom': '🏥',
-        'default': '📁'
-    };
-    
     let uploadedFiles = [];
     
     function initializeUpload() {
         const uploadZone = document.getElementById('uploadZone');
         const fileInput = document.getElementById('fileInput');
-        const fileList = document.getElementById('fileList');
         
         uploadZone.addEventListener('click', function(e) {
             if (e.target !== fileInput) {
