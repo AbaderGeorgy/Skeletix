@@ -1,9 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL =
-  process.env.NODE_ENV === "development"
-    ? ""
-    : process.env.REACT_APP_API_BASE_URL || "http://skeletix.runasp.net";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "";
 
 const DEFAULT_TIMEOUT_MS = 120000;
 

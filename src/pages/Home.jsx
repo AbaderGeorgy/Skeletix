@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import "../styles/home.css";
 
 function Home() {
-  const [theme, setTheme] = useState(
+  const [theme] = useState(
     localStorage.getItem("theme") || "light"
   );
 
