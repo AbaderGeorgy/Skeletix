@@ -901,7 +901,7 @@ function Education() {
             className="logo__img"
           />
           <span className="logo__text" style={{color:"white" }}>
-            Skeleti-<span className="edit" style={{ color: "#0EA5E9" }}><img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" /></span>
+            Skeleti-<span className="edit" style={{ color: "#0EA5E9" }}><img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" /></span>
           </span>
         </div>
                 <p className="footer__description">

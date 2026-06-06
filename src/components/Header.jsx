@@ -87,7 +87,7 @@ function Header() {
               <img
                 src="https://i.postimg.cc/dVxJWzgh/11111.png"
                 className="logo_img_1"
-                alt=""
+                alt="Skeleti-x logo"
               />
             </span>
           </span>

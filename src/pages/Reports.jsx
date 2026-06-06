@@ -46,41 +46,6 @@ const pollQuickResult = async (maxAttempts = 15, delayMs = 3000) => {
   return null;
 };
 
-function ReportsFooter() {
-  return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer__content">
-          <div className="footer_section footer_brand">
-            <div className="footer__logo">
-              <img
-                src="https://i.postimg.cc/dVxJWzgh/11111.png"
-                alt="MedLab Logo"
-                className="logo__img"
-              />
-              <span className="logo__text" style={{ color: "white" }}>
-                Skeleti-
-                <span className="edit">
-                  <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="" />
-                </span>
-              </span>
-            </div>
-            <p className="footer__description">
-              Transform your medical imaging with AI-powered analysis. Fast, accurate, and patient-friendly results.
-            </p>
-          </div>
-        </div>
-        <div className="footer__bottom">
-          <div className="footer__bottom-content">
-            <div className="footer__copyright">
-              <p>© 2025 Skeleti-x. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 export default function Reports() {
   const location = useLocation();
@@ -455,7 +420,7 @@ export default function Reports() {
                 <span className="logo__text" style={{ color: "white" }}>
                   Skeleti-
                   <span className="edit">
-                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="" />
+                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" />
                   </span>
                 </span>
               </div>

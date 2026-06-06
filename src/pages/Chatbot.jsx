@@ -125,7 +125,7 @@ export default function Chatbot() {
                 <span className="logo__text" style={{ color: "white" }}>
                   Skeleti-
                   <span className="edit" style={{ color: "#0EA5E9" }}>
-                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="" />
+                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" />
                   </span>
                 </span>
               </div>

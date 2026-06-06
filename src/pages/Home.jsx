@@ -20,12 +20,6 @@ function Home() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
-
-  const toggleChat = () => setChatVisible(!chatVisible);
-
   const sendChatbotMessage = () => {
     if (!chatInput.trim()) return;
 
@@ -37,10 +31,6 @@ function Home() {
       const botResponse = getBotResponse(chatInput);
       setChatMessages((prev) => [...prev, { type: "bot", text: botResponse }]);
     }, 1000);
-  };
-
-  const handleChatKeyPress = (e) => {
-    if (e.key === "Enter") sendChatbotMessage();
   };
 
   const getBotResponse = (message) => {
@@ -498,7 +488,7 @@ function Home() {
             className="logo__img"
           />
           <span className="logo__text" style={{color:"white" }}>
-            Skeleti-<span className="edit" style={{ color: "#0EA5E9" }}><img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" /></span>
+            Skeleti-<span className="edit" style={{ color: "#0EA5E9" }}><img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" /></span>
           </span>
         </div>
         <p className="footer__description">

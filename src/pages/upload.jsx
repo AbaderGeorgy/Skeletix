@@ -235,7 +235,7 @@ export default function Upload() {
                 <span className="logo__text" style={{ color: "white" }}>
                   Skeleti-
                   <span className="edit">
-                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="" />
+                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" />
                   </span>
                 </span>
               </div>
