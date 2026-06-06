@@ -225,35 +225,33 @@ export default function Upload() {
       <footer className="footer">
         <div className="container">
           <div className="footer__content">
-            <div className="footer_section footer_brand">
+            <div className="footer__section footer__brand">
               <div className="footer__logo">
                 <img
                   src="https://i.postimg.cc/dVxJWzgh/11111.png"
                   alt="MedLab Logo"
                   className="logo__img"
                 />
-                <span className="logo__text" style={{ color: "white" }}>
-                  Skeleti-
-                  <span className="edit">
-                    <img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" />
-                  </span>
+                <span className="logo__text" style={{color:"white" }}>
+                  Skeleti-<span className="edit" style={{ color: "#0EA5E9" }}><img src="https://i.postimg.cc/dVxJWzgh/11111.png" className="logo_img_1" alt="Skeleti-x logo" /></span>
                 </span>
               </div>
               <p className="footer__description">
                 Transform your medical imaging with AI-powered analysis. Fast, accurate, and patient-friendly results.
               </p>
+
               <div className="footer__social">
-                <h5>Follow Us</h5>
+                <h5 className="footer__social-title">Follow Us</h5>
                 <div className="social-links">
-                  <button type="button" className="social-link">🐦 Twitter</button>
-                  <button type="button" className="social-link">🗺 LinkedIn</button>
-                  <button type="button" className="social-link">📱 Facebook</button>
+                  <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
+                  <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">🗺 LinkedIn</a>
+                  <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">📱 Facebook</a>
                 </div>
               </div>
             </div>
 
             <div className="footer__section">
-              <h4>Quick Links</h4>
+              <h4 className="footer__section-title">Quick Links</h4>
               <ul className="footer__links">
                 <li><Link to="/upload">Upload Files</Link></li>
                 <li><Link to="/dashboard">Dashboard</Link></li>
@@ -264,23 +262,26 @@ export default function Upload() {
             </div>
 
             <div className="footer__section">
-              <h4>Resources</h4>
+              <h4 className="footer__section-title">Resources</h4>
               <ul className="footer__links">
-                <li><button type="button" className="footer-link-button">Help Center</button></li>
-                <li><button type="button" className="footer-link-button">API Documentation</button></li>
-                <li><button type="button" className="footer-link-button">Medical Guidelines</button></li>
-                <li><button type="button" className="footer-link-button">Research Papers</button></li>
-                <li><button type="button" className="footer-link-button">Blog</button></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Help Center</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">API Documentation</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Medical Guidelines</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Research Papers</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Blog</a></li>
               </ul>
             </div>
 
             <div className="footer__section">
-              <h4>Newsletter</h4>
-              <p className="footer__newsletter-text">Stay updated with the latest in AI medical technology</p>
+              <h4 className="footer__section-title">Newsletter</h4>
+              <p className="footer__newsletter-text">
+                Stay updated with the latest in AI medical technology
+              </p>
               <div className="newsletter-form">
-                <input className="newsletter-input" placeholder="Enter your email" type="email" />
+                <input type="email" placeholder="Enter your email" className="newsletter-input" />
                 <button className="newsletter-btn">Subscribe</button>
               </div>
+
               <div className="footer__badges">
                 <div className="compliance-badge">
                   <span className="badge-icon">🛡️</span>
@@ -297,13 +298,13 @@ export default function Upload() {
           <div className="footer__bottom">
             <div className="footer__bottom-content">
               <div className="footer__copyright">
-                <p>© 2025 Skeleti-x. All rights reserved.</p>
+                <p>&copy; 2025 Skeleti-x. All rights reserved.</p>
               </div>
               <div className="footer__legal">
-                <button type="button" className="footer-link-button">Privacy Policy</button>
-                <button type="button" className="footer-link-button">Terms of Service</button>
-                <button type="button" className="footer-link-button">Cookie Policy</button>
-                <button type="button" className="footer-link-button">Accessibility</button>
+                <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Accessibility</a>
               </div>
             </div>
           </div>
