@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const PROXY_TIMEOUT_MS = 300000;
 
 const SKELETIX_API =
-  process.env.REACT_APP_API_BASE_URL || "http://skeletix.runasp.net";
+  process.env.REACT_APP_API_BASE_URL || "https://skeletix.runasp.net";
 
 const CHATBOT_API = (
   process.env.REACT_APP_CHATBOT_URL ||

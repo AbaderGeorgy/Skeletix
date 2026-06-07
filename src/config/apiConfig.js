@@ -5,7 +5,7 @@
 export const getSkeletixApiBaseUrl = () =>
   process.env.NODE_ENV === "development"
     ? ""
-    : process.env.REACT_APP_API_BASE_URL || "http://skeletix.runasp.net";
+    : process.env.REACT_APP_API_BASE_URL || "https://skeletix.runasp.net";
 
 const RAILWAY_CHATBOT_DEFAULT =
   "https://medical-chatbot-backend-production-e684.up.railway.app";

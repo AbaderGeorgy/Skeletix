@@ -6,7 +6,7 @@
 # This avoids browser mixed-content blocks (HTTPS page → HTTP server).
 [[redirects]]
   from = "/api/*"
-  to = "http://skeletix.runasp.net/api/:splat"
+  to = "https://skeletix.runasp.net/api/:splat"
   status = 200
   force = true
 
