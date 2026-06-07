@@ -33,14 +33,22 @@ export function useChatbotConversation(initialBotMessage = DEFAULT_INITIAL_MESSA
 
     try {
       const data = await sendChatbotMessage({ message: trimmedMessage });
+      const reply = data?.reply || data?.response;
+
+      if (!reply) {
+        throw new Error("No response received from the assistant.");
+      }
 
       setMessages((prev) => [
         ...prev,
-        { id: Date.now() + 1, role: "bot", text: data.reply || data.response || "No response received." },
+        { id: Date.now() + 1, role: "bot", text: reply },
       ]);
       window.requestAnimationFrame(scrollMessagesToBottom);
     } catch (err) {
-      setError(err.message || "Unable to send message. Please try again.");
+      setError(
+        err.message ||
+          "Unable to reach the chatbot. Please check your connection and try again."
+      );
     } finally {
       setIsLoading(false);
     }

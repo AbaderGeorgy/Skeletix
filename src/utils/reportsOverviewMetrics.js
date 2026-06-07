@@ -1,5 +1,4 @@
-import { formatRelativeTime } from "./formatRelativeTime";
-import { formatConfidence } from "./reportHelpers";
+import { formatConfidence, normalizePrediction } from "./reportHelpers";
 
 const toConfidencePercent = (value) => {
   if (value == null || Number.isNaN(Number(value))) return null;
@@ -15,6 +14,15 @@ const averageFromReports = (reports) => {
   return values.reduce((sum, v) => sum + v, 0) / values.length;
 };
 
+const highestFromReports = (reports, quickResult) => {
+  const values = reports
+    .map((r) => toConfidencePercent(r.confidence))
+    .filter((v) => v != null);
+  const quick = toConfidencePercent(quickResult?.confidence);
+  if (quick != null) values.push(quick);
+  return values.length ? Math.max(...values) : null;
+};
+
 export const buildReportsOverviewMetrics = ({
   apiStats,
   history = [],
@@ -28,30 +36,26 @@ export const buildReportsOverviewMetrics = ({
   const apiTotal = apiCompleted + apiPending;
 
   const totalReports = Math.max(apiTotal, historyCount, hasQuick ? 1 : 0);
-  const completedReports = Math.max(apiCompleted, historyCount, hasQuick ? 1 : 0);
 
   const apiAvg = toConfidencePercent(apiStats?.averageConfidence);
   const historyAvg = averageFromReports(history);
   const quickAvg = toConfidencePercent(quickResult?.confidence);
-
   const avgConfidence =
     Math.max(apiAvg ?? 0, historyAvg ?? 0, quickAvg ?? 0) || null;
 
-  const lastDate =
-    history[0]?.createdAt ||
-    (hasQuick ? new Date().toISOString() : null);
+  const highest = highestFromReports(history, quickResult);
 
-  const lastAnalysis = lastDate
-    ? formatRelativeTime(lastDate)
-    : hasQuick
-      ? "Just now"
-      : "—";
+  const latest = history[0] || (hasQuick ? { prediction: quickResult.prediction, diseaseName: quickResult?.recommendation?.title } : null);
+  const latestDiagnosis = latest
+    ? normalizePrediction(latest.prediction) || latest.diseaseName || "—"
+    : "—";
 
   return {
     totalReports: totalReports > 0 ? totalReports : "—",
-    completedReports: completedReports > 0 ? completedReports : "—",
+    latestDiagnosis,
     averageConfidence:
       avgConfidence != null ? formatConfidence(avgConfidence / 100) : "—",
-    lastAnalysis,
+    highestConfidence:
+      highest != null ? formatConfidence(highest / 100) : "—",
   };
 };

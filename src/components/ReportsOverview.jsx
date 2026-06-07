@@ -33,15 +33,12 @@ export default function ReportsOverview({ metrics, loading, error, onRetry }) {
     <section className="reports-statistics">
       <h2 className="section-title">Reports Overview</h2>
       <div className="stats-grid">
+        <StatCard icon="📋" value={metrics.totalReports} label="Total Reports" />
         <StatCard
-          icon="📋"
-          value={metrics.totalReports}
-          label="Total Reports"
-        />
-        <StatCard
-          icon="✅"
-          value={metrics.completedReports}
-          label="Completed Reports"
+          icon="🩺"
+          value={metrics.latestDiagnosis}
+          label="Latest Diagnosis"
+          isTextValue
         />
         <StatCard
           icon="📊"
@@ -49,10 +46,9 @@ export default function ReportsOverview({ metrics, loading, error, onRetry }) {
           label="Average Confidence Score"
         />
         <StatCard
-          icon="🕒"
-          value={metrics.lastAnalysis}
-          label="Last Analysis"
-          isTextValue
+          icon="📈"
+          value={metrics.highestConfidence}
+          label="Highest Confidence Score"
         />
       </div>
     </section>
