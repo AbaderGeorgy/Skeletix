@@ -3,9 +3,7 @@
  * In development, CRA proxies /api -> REACT_APP_API_BASE_URL via setupProxy.js
  */
 export const getSkeletixApiBaseUrl = () =>
-  process.env.NODE_ENV === "development"
-    ? ""
-    : process.env.REACT_APP_API_BASE_URL || "http://skeletix.runasp.net";
+  process.env.REACT_APP_API_BASE_URL || "";
 
 /**
  * Flask + Gemini chat API (POST /chat only)

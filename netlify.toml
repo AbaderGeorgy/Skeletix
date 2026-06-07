@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+# Proxy /api/* to the ASP.NET Core backend through Netlify's HTTPS edge.
+# This avoids browser mixed-content blocks (HTTPS page → HTTP server).
+[[redirects]]
+  from = "/api/*"
+  to = "http://skeletix.runasp.net/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback — let React Router handle all client-side routes.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

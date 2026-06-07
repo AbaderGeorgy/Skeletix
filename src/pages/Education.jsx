@@ -286,7 +286,6 @@ function generateArticleContent(categoryKey, title, description) {
 }
 
 function Education() {
-  const [theme, setTheme] = useState('light');
   const [activeCategory, setActiveCategory] = useState('all');
   const [savedArticles, setSavedArticles] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -604,7 +603,6 @@ function Education() {
   
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
 
     const saved = JSON.parse(localStorage.getItem('savedArticles') || '[]');
