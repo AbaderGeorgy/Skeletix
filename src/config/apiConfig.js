@@ -6,8 +6,22 @@ export const getSkeletixApiBaseUrl = () =>
   process.env.REACT_APP_API_BASE_URL || "";
 
 /**
- * Flask + Gemini chat API (POST /chat only)
+ * Railway Python (Gunicorn) Chatbot Backend
+ * Production: https://medical-chatbot-backend-production-e684.up.railway.app/
+ * In development, CRA proxies /chatbot -> REACT_APP_CHATBOT_API_URL via setupProxy.js
+ */
+export const getChatbotApiBaseUrl = () =>
+  process.env.NODE_ENV === "development"
+    ? ""
+    : process.env.REACT_APP_CHATBOT_API_URL || "https://medical-chatbot-backend-production-e684.up.railway.app";
+
+export const CHATBOT_CHAT_ENDPOINT = "/chat";
+export const CHATBOT_HEALTH_ENDPOINT = "/health";
+
+/**
+ * Legacy Flask + Gemini chat API (POST /chat only)
  * In development, CRA proxies /chat -> REACT_APP_FLASK_API_URL via setupProxy.js
+ * @deprecated Use getChatbotApiBaseUrl instead
  */
 export const getFlaskApiBaseUrl = () =>
   process.env.NODE_ENV === "development"
